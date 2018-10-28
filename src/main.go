@@ -1,14 +1,15 @@
 package main
 
 import (
-	"fmt"
+	"github.com/gorilla/handlers"
 	"log"
 	"net/http"
+	"os"
 )
 
 func main() {
 	router := NewRouter()
-	log.Println(http.ListenAndServe(":8088", router))
-	//log.Fatal(http.ListenAndServe(":8088", router))
-	fmt.Println("Container successful")
+	log.Println("Server is starting...")
+	loggedRouter := handlers.LoggingHandler(os.Stdout, router)
+	log.Fatal(http.ListenAndServe(":8088", loggedRouter))
 }
