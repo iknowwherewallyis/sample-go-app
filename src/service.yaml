@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sample-app
+  labels:
+    app: sample-app
+spec:
+  ports:
+  - port: 8088
+    targetPort: 8088
+  selector:
+    app:  sample-app
+    tier:  sample-app
+  type: NodePort

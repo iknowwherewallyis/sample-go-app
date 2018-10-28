@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 )
@@ -8,4 +9,5 @@ import (
 func main() {
 	router := NewRouter()
 	log.Fatal(http.ListenAndServe(":8088", router))
+	fmt.Println("Container successful")
 }

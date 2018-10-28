@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sample-app
+  labels:
+    app: sample-app
+spec:
+  ports:
+  - port: 8088
+    targetPort: 8088
+  selector:
+    app:  sample-app
+    tier:  sample-app
+  type: NodePort
+
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: sample-app
+  labels:
+    app: sample-app
+spec:
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: sample-app
+        tier: sample-app
+    spec:
+      containers:
+      - image: 127.0.0.1:30400/sample-app:latest
+        name: sample-app
+        ports:
+        - containerPort: 8088
+          name: sample-app
+
+
