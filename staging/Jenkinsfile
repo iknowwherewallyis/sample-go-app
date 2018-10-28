@@ -15,7 +15,7 @@ node {
 
     stage "Build"
 
-        sh "docker build -t ${imageName} -f ../src/Dockerfile ../src/"
+        sh "docker build -t ${imageName} -f /sample-go-app/src/Dockerfile /sample-go-app/src/"
 
     stage "Push"
 
