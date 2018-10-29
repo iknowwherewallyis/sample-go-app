@@ -7,6 +7,6 @@ import (
 
 func main() {
 	router := NewRouter()
-	log.Println("testing staging")
+	//log.Println("Staging server running")
 	log.Fatal(http.ListenAndServe(":8088", router))
 }
