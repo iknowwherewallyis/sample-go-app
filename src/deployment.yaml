@@ -30,7 +30,7 @@ spec:
         tier: sample-app
     spec:
       containers:
-      - image: 127.0.0.1:30400/sample-app:latest
+      - image: 127.0.0.1:30400/sample-app:$BUILD_TAG
         name: sample-app
         ports:
         - containerPort: 8088
