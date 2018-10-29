@@ -25,6 +25,6 @@ node {
 
     stage "Deploy"
 
-        kubernetesDeploy configs: "src/deployment.yaml", kubeconfigId: 'sample-kubeconfig'
+        kubernetesDeploy configs: "src/sample-app-deployment.yaml", kubeconfigId: 'sample-kubeconfig'
 
 }
