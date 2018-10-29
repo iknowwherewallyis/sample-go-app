@@ -25,6 +25,6 @@ node {
 
     stage "Deploy"
 
-        kubernetesDeploy configs: "src/deployment.yaml", kubeconfigId: 'kenzan_kubeconfig'
+        kubernetesDeploy configs: "src/deployment.yaml", kubeconfigId: 'sample-kubeconfig'
 
 }
