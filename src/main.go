@@ -9,7 +9,7 @@ import (
 
 func main() {
 	router := NewRouter()
-	log.Println("Server is starting...")
+	log.Println("Server is starting with newest image...")
 	loggedRouter := handlers.LoggingHandler(os.Stdout, router)
 	log.Fatal(http.ListenAndServe(":8088", loggedRouter))
 }
