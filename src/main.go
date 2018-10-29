@@ -9,7 +9,6 @@ import (
 
 func main() {
 	router := NewRouter()
-	log.Println("Testing git trigger")
 	log.Println("Server is starting...")
 	loggedRouter := handlers.LoggingHandler(os.Stdout, router)
 	log.Fatal(http.ListenAndServe(":8088", loggedRouter))
