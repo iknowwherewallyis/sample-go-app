@@ -33,7 +33,7 @@ Open Jenkins service in browser:
 - minikube service jenkins
 
 Get initial admin password and unlock Jenkins:
-- kubectl exec -it jenkins-758dcff45b-n4wzk cat /var/jenkins_home/secrets/initialAdminPassword
+- kubectl exec -it <jenkins-pod-id> cat /var/jenkins_home/secrets/initialAdminPassword
 
 - Install suggested plugins (come from plugins.txt) 
 
