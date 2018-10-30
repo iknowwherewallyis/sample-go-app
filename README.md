@@ -25,7 +25,7 @@ Run the initialization script (init.sh) to do the following:
 - Build and push image for the sample application to the registry
 - Build, push & deploy Jenkins instance to the cluster
 - Create the Timber.io secret for pushing logs to web dashboard
-- Create the Timer logging agent to listen at the node level for pod logs
+- Create the Timber logging agent to listen at the node level for pod logs
 
 ### Step 4:
 
