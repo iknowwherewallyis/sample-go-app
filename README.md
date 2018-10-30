@@ -20,7 +20,7 @@ git clone https://github.com/iknowwherewallyis/sample-go-app/
 ### Step 3: 
 
 Run the initialization script to do the following:
-- Build and run a Docker registry inside Minikube
+- Build and deploy a Docker registry inside Minikube
 - Build and run and a proxy registry for ease of pushing images to a local registry
 - Build and push image for the sample application to the registry
 - Build, push & deploy Jenkins instance to the cluster
